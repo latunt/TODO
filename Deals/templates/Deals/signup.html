@@ -7,7 +7,10 @@
 </head>
 <body>
     <form method="POST">
+        {% csrf_token %}
         {{ form.as_p }}
+        {{ error }}
+        <button type="submit">Signup</button>
     </form>
 </body>
 </html>
