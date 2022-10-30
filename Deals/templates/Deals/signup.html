@@ -6,11 +6,14 @@
     <title></title>
 </head>
 <body>
+    {% extends 'Deals/base.html' %}
+    {% block content %}
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         {{ error }}
         <button type="submit">Signup</button>
     </form>
+    {% endblock %}
 </body>
 </html>

@@ -13,7 +13,11 @@ def signup(request):
                 user=User.objects.create_user(request.POST['username'],password=request.POST['password1'])
                 user.save()
                 login(request,user)
+                return redirect('current')
+                print('hi')
             except IntegrityError:
                 return render(request,'Deals/signup.html',{'form':UserCreationForm,"error":"User had been registered"})
         else:
             return render(request,'Deals/signup.html',{'form':UserCreationForm,"error":"Password do not repeated"})
+def current(request):
+    return render(request,'Deals/home.html')
