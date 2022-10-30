@@ -47,6 +47,7 @@
     <Content Include="Deals\templates\Deals\base.html" />
     <Content Include="Deals\templates\Deals\home.html" />
     <Content Include="Deals\templates\Deals\signup.html" />
+    <Content Include="Deals\templates\Deals\current.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
